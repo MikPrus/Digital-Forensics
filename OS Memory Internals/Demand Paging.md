@@ -10,6 +10,8 @@ needed. This method is called Demand Paging.
 
 Using it, we can save some space and if necessary, we can load further elements of the program into memory through page faults.
 
+![image](https://github.com/MikPrus/Digital-Forensics/assets/72823731/4be11235-c7e4-4eb3-9a6e-b715375c0869)
+
 # How Demand Paging decides which memory regions are resident?
 
 As explained above, demand paging determines which regions of the memory are resident ( in physical memory ) and which are not. 
