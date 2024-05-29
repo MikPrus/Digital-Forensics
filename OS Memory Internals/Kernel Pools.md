@@ -1,12 +1,12 @@
 # Kernel Pools
 
-The operating system needs a way of managing objects that are created in memory. On windows, this is achieved through the use of Kernel Pools. Windows uses them to track and manage memory objects like files, threads, mutants mutexes ( see list below ).
+The operating system needs a way of managing objects that are created in memory. On windows, this is achieved through the use of Kernel Pools and Executive Objects. Windows uses them to track and manage memory objects by creating separate allocation pools, containing their own Executive Object representing a system structures like files, threads, mutants mutexes.
 Each kernel component has its own four byte tag, which is used to identify it in memory. 
 Each kernel object in memory is defined in the following way:
 
 ![image](https://github.com/MikPrus/Digital-Forensics/assets/72823731/6090abef-e68b-4801-a131-87579658e28d)
 
-Each kernel objectin memory has a pool header, additional options, an object header and an object body ;)
+Each kernel object in memory is in fact a kernel pool with an EXECUTIVE_OBJECT inside of it that defines what it is, additional options, an object header and an object body ( the real content ) ;)
 
 ## Dissecting POOL_HEADER
 
